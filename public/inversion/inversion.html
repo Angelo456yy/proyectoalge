@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversion de Matriz</title>
+</head>
+<body>
+    <h1>Calculadora de  Matriz Inversa</h1>
+    <p>Ingrese una matriz 3x3 para calcular su determinante, su matriz traspuesta, su matriz adjunta y su matriz inversa:</p>
+
+    <table>
+        <tr>
+            <td><input type="text" id="a11" placeholder="a11"></td>
+            <td><input type="text" id="a12" placeholder="a12"></td>
+            <td><input type="text" id="a13" placeholder="a13"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="a21" placeholder="a21"></td>
+            <td><input type="text" id="a22" placeholder="a22"></td>
+            <td><input type="text" id="a23" placeholder="a23"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="a31" placeholder="a31"></td>
+            <td><input type="text" id="a32" placeholder="a32"></td>
+            <td><input type="text" id="a33" placeholder="a33"></td>
+        </tr>
+    </table>
+    
+    <button onclick="calcularExpresion()">Calcular Expresión</button>
+    <p>Resultado del determinante: <span id="resultadoExpresion"></span></p>
+
+    <button onclick="traspuesta()">Calcular traspuesta</button>
+    <p>Resultado de la traspuesta: <span id="traspuesta"></span></p>
+</body> 
+ <script src="inversion.js"></script>
+</html>

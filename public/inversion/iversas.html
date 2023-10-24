@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inversion 3*3</title>
+    <link rel="stylesheet"  href="inver.css">
+</head>
+<body>
+    <div class="inicio">
+        <h1>Calculadora de Matriz Inversa</h1>
+    <p>Ingrese una matriz 3x3 para calcular su inversa &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resultado</p> 
+    </div>
+    
+
+<div class="operacion">
+<div class="tabla">
+    <table>
+        <tr>
+            <td><input type="text" id="a11" placeholder="a11"></td>
+            <td><input type="text" id="a12" placeholder="a12"></td>
+            <td><input type="text" id="a13" placeholder="a13"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="a21" placeholder="a21"></td>
+            <td><input type="text" id="a22" placeholder="a22"></td>
+            <td><input type="text" id="a23" placeholder="a23"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="a31" placeholder="a31"></td>
+            <td><input type="text" id="a32" placeholder="a32"></td>
+            <td><input type="text" id="a33" placeholder="a33"></td>
+        </tr>
+    </table>
+    <br>
+    <button class="boton" onclick="calcularDeterminanteYTraspuestaYAdjuntaYInversa()">Calcular  Matriz Inversa</button>
+
+</div>
+<div class="Result">
+  
+    <div class="respuesta">
+      <table id="matrizInversa"></table>  
+    </div>
+</div>
+</div>
+
+<nav class="menu">
+    <ul class="menuhorizontal">
+        <li><a href="#" id="determinante">Mostrar Determinante</a>
+        <ul class="menuvertical">
+            <li><p>El determinante de la matriz es: <span id="determinante" style="display: none;"></span></p></li>
+        </ul></li>
+        <li><a href="#" id="matrizTraspuesta">Mostrar Matriz Traspuesta</a>
+        <ul class="menuvertical"><li><p>La matriz traspuesta es:</p>
+<table id="matrizTraspuesta" style="display: none;"></table></li>
+</ul></li>
+        <li><a href="#" id="matrizAdjunta">Mostrar Matriz Adjunta</a><ul class="menuvertical"><li><p>La matriz adjunta es:<table id="matrizAdjunta" style="display: none;"></table></p>
+</li></ul></li>
+        <li><a href="#">Anuncios</a><ul class="menuvertical" ><li><a href="https://youtu.be/DLzxrzFCyOs?feature=shared"><img src="momo.png"></a></li><li><img src="anuncio.jpg" alt=""></li></ul></li>
+    </ul>
+</nav>
+    <br>
+    <br>
+    <br>
+    <br>
+<audio controls autoplay>
+    <source src="song.mp3" type="audio/mpeg">
+    Tu navegador no soporta la reproducción de audio.
+</audio>
+</body>
+<script src="inversion2.js"></script>
+</html>

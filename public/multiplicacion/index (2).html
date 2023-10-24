@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplicacion de Matrices</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+   
+   <div class="Tit">
+    <h1>Multiplicación de Matrices 3x3</h1>
+   </div> 
+
+     
+<div id="matrix-container">
+        <div class="a">
+        <label for="matrixA">Matriz A (3x3):</label>
+        <br>
+        <input type="number" class="matrix-input" id="a_0_0"> <input type="number" class="matrix-input" id="a_0_1"> <input type="number" class="matrix-input" id="a_0_2"><br>
+        <input type="number" class="matrix-input" id="a_1_0"> <input type a number" class="matrix-input" id="a_1_1"> <input type="number" class="matrix-input" id="a_1_2"><br>
+        <input type="number" class="matrix-input" id="a_2_0"> <input type="number" class="matrix-input" id="a_2_1"> <input type="number" class="matrix-input" id="a_2_2">
+        </div>
+        <div class="b">
+        <label for="matrixB">Matriz B (3x3):</label>
+        <br>
+        <input type="number" class="matrix-input" id="b_0_0"> <input type="number" class="matrix-input" id="b_0_1"> <input type="number" class="matrix-input" id="b_0_2"><br>
+        <input type="number" class="matrix-input" id="b_1_0"> <input type="number" class="matrix-input" id="b_1_1"> <input type="number" class="matrix-input" id="b_1_2"><br>
+        <input type="number" class="matrix-input" id="b_2_0"> <input type="number" class="matrix-input" id="b_2_1"> <input type="number" class="matrix-input" id="b_2_2">
+        <br>   
+        </div>
+    </div>
+
+  <button class="boton" onclick="multiplyMatrices()">Multiplicar Matrices</button>
+     <div class="cuadro">
+        <div  class="resul" id="matrix-result"></div>
+        <div class="img"> <a href="https://www.tigo.com.gt/"><img src="giphy.gif" alt=""></a></div>
+     </div>
+
+    <div class="audio"><audio controls autoplay>
+            <source src="song.mp3" type="audio/mpeg">
+            Tu navegador no soporta la reproducción de audio.
+        </audio></div>
+    
+    <script src="multipli.js"></script>
+</body>
+</html>

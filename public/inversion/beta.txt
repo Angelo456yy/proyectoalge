@@ -1,0 +1,139 @@
+1 <h1>Calculadora de Determinante</h1>
+        <p>Ingrese una matriz 3x3 para calcular su determinante:</p>
+    
+        <table>
+            <tr>
+                <td><input type="text" id="a11" placeholder="a11"></td>
+                <td><input type="text" id="a12" placeholder="a12"></td>
+                <td><input type="text" id="a13" placeholder="a13"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="a21" placeholder="a21"></td>
+                <td><input type="text" id="a22" placeholder="a22"></td>
+                <td><input type="text" id="a23" placeholder="a23"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="a31" placeholder="a31"></td>
+                <td><input type="text" id="a32" placeholder="a32"></td>
+                <td><input type="text" id="a33" placeholder="a33"></td>
+            </tr>
+        </table>
+    
+        <button onclick="calcularDeterminante()">Calcular Determinante</button>
+    
+        <p>El determinante de la matriz es: <span id="resultado"></span></p>
+
+
+        #####js
+
+        function calcularDeterminante() {
+    const a11 = parseFloat(document.getElementById("a11").value);
+    const a12 = parseFloat(document.getElementById("a12").value);
+    const a13 = parseFloat(document.getElementById("a13").value);
+    const a21 = parseFloat(document.getElementById("a21").value);
+    const a22 = parseFloat(document.getElementById("a22").value);
+    const a23 = parseFloat(document.getElementById("a23").value);
+    const a31 = parseFloat(document.getElementById("a31").value);
+    const a32 = parseFloat(document.getElementById("a32").value);
+    const a33 = parseFloat(document.getElementById("a33").value);
+
+    const det =
+        a11 * a22 * a33 +
+        a12 * a23 * a31 +
+        a13 * a21 * a32 -
+        a13 * a22 * a31 -
+        a12 * a21 * a33 -
+        a11 * a23 * a32;
+
+    document.getElementById("resultado").textContent = det;
+
+    2
+
+    <h1>Calculadora de Determinante y Matriz Traspuesta</h1>
+    <p>Ingrese una matriz 3x3 para calcular su determinante y su matriz traspuesta:</p>
+
+    <table>
+        <tr>
+            <td><input type="text" id="a11" placeholder="a11"></td>
+            <td><input type="text" id="a12" placeholder="a12"></td>
+            <td><input type="text" id="a13" placeholder="a13"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="a21" placeholder="a21"></td>
+            <td><input type="text" id="a22" placeholder="a22"></td>
+            <td><input type="text" id="a23" placeholder="a23"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="a31" placeholder="a31"></td>
+            <td><input type="text" id="a32" placeholder="a32"></td>
+            <td><input type="text" id="a33" placeholder="a33"></td>
+        </tr>
+    </table>
+
+    <button onclick="calcularDeterminanteYTraspuesta()">Calcular Determinante y Matriz Traspuesta</button>
+
+    <p>El determinante de la matriz es: <span id="determinante"></span></p>
+    
+    <p>La matriz traspuesta es:</p>
+    <table id="matrizTraspuesta"></table>
+
+
+    2
+
+    function calcularDeterminanteYTraspuesta() {
+    const a11 = parseFloat(document.getElementById("a11").value);
+    const a12 = parseFloat(document.getElementById("a12").value);
+    const a13 = parseFloat(document.getElementById("a13").value);
+    const a21 = parseFloat(document.getElementById("a21").value);
+    const a22 = parseFloat(document.getElementById("a22").value);
+    const a23 = parseFloat(document.getElementById("a23").value);
+    const a31 = parseFloat(document.getElementById("a31").value);
+    const a32 = parseFloat(document.getElementById("a32").value);
+    const a33 = parseFloat(document.getElementById("a33").value);
+
+    const matriz = [
+        [a11, a12, a13],
+        [a21, a22, a23],
+        [a31, a32, a33]
+    ];
+
+    // Calcular el determinante
+    const det =
+        a11 * a22 * a33 +
+        a12 * a23 * a31 +
+        a13 * a21 * a32 -
+        a13 * a22 * a31 -
+        a12 * a21 * a33 -
+        a11 * a23 * a32;
+
+    document.getElementById("determinante").textContent = det;
+
+    // Verificar si el determinante es igual a 0
+    if (det !== 0) {
+        // Calcular la matriz traspuesta
+        const matrizTraspuesta = [];
+        
+        for (let i = 0; i < matriz[0].length; i++) {
+            matrizTraspuesta[i] = [];
+            for (let j = 0; j < matriz.length; j++) {
+                matrizTraspuesta[i][j] = matriz[j][i];
+            }
+        }
+
+        const matrizTraspuestaElement = document.getElementById("matrizTraspuesta");
+        matrizTraspuestaElement.innerHTML = "";
+
+        for (let i = 0; i < matrizTraspuesta.length; i++) {
+            const row = document.createElement("tr");
+            for (let j = 0; j < matrizTraspuesta[i].length; j++) {
+                const cell = document.createElement("td");
+                cell.textContent = matrizTraspuesta[i][j];
+                row.appendChild(cell);
+            }
+            matrizTraspuestaElement.appendChild(row);
+        }
+    } else {
+        // Si el determinante es 0, mostrar un mensaje
+        document.getElementById("matrizTraspuesta").textContent = "No se puede calcular la matriz traspuesta debido a un determinante de 0.";
+    }
+}

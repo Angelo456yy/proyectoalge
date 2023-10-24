@@ -1,0 +1,143 @@
+body {
+    background-image: url('fondo.gif'); /* Reemplaza 'ruta-del-archivo.gif' con la ruta de tu archivo GIF */
+    background-size: cover; /* Ajusta el tamaño de la imagen al tamaño de la ventana del navegador */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+}
+
+.inicio{
+    color: bisque;
+    font-size: 23px;
+    background-color: rgba(25, 27, 53, 0.597);
+    border-radius: 8px;
+    padding-left: 30px;
+
+
+}
+.operacion {
+    background-color: #0c0c0c92;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 2px solid rgb(7, 26, 56);
+}
+
+.tabla, .Result {
+    height: 150px;
+    width: 50%;
+}
+
+.Result {
+    background-color: #22283871;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.tabla {
+    padding-top: 15px;
+    padding-left: 10px;
+}
+.respuesta {
+    background-color: rgba(144, 144, 144, 0.891);
+    border-radius: 10px;
+    height: 150px;
+    width: 150px;
+    margin-left: 200px;
+    font-family: "Arial", sans-serif;
+    font-size: 25px;
+    margin-bottom: 80px;
+    transition: box-shadow 0.3s; 
+    color: rgba(0, 0, 0, 0.873);
+}
+
+.respuesta:hover {
+    box-shadow: 0 0 20px rgba(37, 255, 146, 0.7); /* Cambia la sombra al pasar el cursor sobre el elemento */
+}
+
+.boton {
+    background-color: rgba(14, 35, 49, 0.724);
+    border-radius: 8px;
+    width: 150px;
+    height: 50px;
+    color: white;
+    transition: box-shadow 0.3s;
+}
+
+/* Estilos para el botón cuando el mouse está sobre él */
+.boton:hover {
+    background-color: #09cb73; /* Cambia el color de fondo cuando el mouse está sobre el botón */
+    box-shadow: 0 0 10px rgba(236, 239, 240, 0.953); /* Agrega una sombra al botón */
+}
+
+.menu{
+    max-width: 900px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.509);
+    font-size: 20px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+.menuhorizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menuhorizontal > li > a{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menuhorizontal > li:hover{
+    background-color: aqua;
+}
+
+.menuvertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: #0c0c0c92;
+}
+
+.menuhorizontal li:hover .menuvertical{
+    display: block;
+}
+
+.menuvertical li:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+audio {
+    background-color: #3498db; /* Azul */
+    border: 2px solid #2980b9; /* Borde más oscuro */
+}
+
+/* Cambiar el color de los botones y el texto de tiempo a blanco */
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button,
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: #00a2ff; /* Blanco */
+}
+
+/* Cambiar el color del fondo del control de volumen a un tono más oscuro de azul */
+audio::-webkit-media-controls-volume-slider {
+    background: #2077b1; /* Azul más oscuro */
+}
+
+/* Cambiar el color del botón de silencio a blanco */
+audio::-webkit-media-controls-mute-button {
+    color: #246fba; /* Blanco */
+}
+
+
+
+
+
+

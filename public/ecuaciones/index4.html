@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Ecuaciones</title>
+    <link rel="stylesheet" href="deco.css">
+</head>
+<body>
+ <h1 class="inicio">Resolución de Sistemas de Ecuaciones 3x3</h1>
+ <div class="tres">
+     <form>
+        <label for="a11">x:</label>
+        <input type="text" id="a11">
+        <label for="a12">y:</label>
+        <input type="text" id="a12">
+        <label for="a13">z:</label>
+        <input type="text" id="a13">
+        <label for="b1">=:</label>
+        <input type="text" id="b1">
+        <br>
+        <label for="a21">x:</label>
+        <input type="text" id="a21">
+        <label for="a22">y:</label>
+        <input type="text" id="a22">
+        <label for="a23">z:</label>
+        <input type="text" id="a23">
+        <label for="b2">=:</label>
+        <input type="text" id="b2">
+        <br>
+        <label for="a31">x:</label>
+        <input type="text" id="a31">
+        <label for="a32">y:</label>
+        <input type="text" id="a32">
+        <label for="a33">z:</label>
+        <input type="text" id="a33">
+        <label for="b3">=:</label>
+        <input type="text" id="b3">
+        <br>
+        <br>
+        <button class="boton1" type="button" onclick="resolverSistema()">Resolver</button>
+    </form>
+    <p id="resultado"></p>   
+ </div>
+   
+
+    <h2 class="sistema">Sistema de Ecuaciones 2x2</h2>
+
+    <div class="dos">
+    <form>
+        <label for="a11">x:</label>
+        <input type="text" id="a11">
+        <label for="a12">y:</label>
+        <input type="text" id="a12">
+        <label for="b1">=:</label>
+        <input type="text" id="b1">
+        <br>
+        <label for="a21">x:</label>
+        <input type="text" id="a21">
+        <label for="a22">y:</label>
+        <input type="text" id="a22">
+        <label for="b2">=:</label>
+        <input type="text" id="b2">
+        <br>
+        <br>
+        <button class="boton2" type="button" onclick="resolverSistema2x2()">Resolver 2x2</button>
+    </form>
+    <p id="resultado_2x2"></p>    
+    </div>
+    
+    <audio controls autoplay>
+        <source src="song.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+      </audio>
+
+    <script src="ecua.js"></script>
+    <script src="ecua2x2.js"></script>
+</body>
+</html>
